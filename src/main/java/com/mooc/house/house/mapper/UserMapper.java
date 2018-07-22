@@ -11,4 +11,12 @@ public interface UserMapper {
 
 	public List<User> selectUsers();
 
+	public int insert(User account);
+
+	public void delete(String key);
+
+	public void update(User updateUser);
+
+	public List<User> getUserByQuery(User user);
+
 }

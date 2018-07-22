@@ -6,5 +6,55 @@
 	<select id="selectUsers" resultType="user">
 		select id,name,email,phone from User
 	</select>
+	<insert id="insert">
+		insert into user(name,phone,email,aboutme,passwd,avator,type,create_time,enable)
+		values (#{name},#{phone},#{email},#{aboutme},#{passwd},#{avator},#{type},#{createTime},#{enable})
+	</insert>
+	<delete id="delete">
+		delete from user
+		where email = #{email}
+	</delete>
+	<update id="update">
+		update user
+		<set>
+			<if test="phone !=null and phone !='' ">
+				phone = #{phone}
+			</if>
+			<if test="name !=null and name !='' ">
+				name = #{name}
+			</if>
+			<if test="aboutme !=null and aboutme !='' ">
+				aboutme = #{aboutme}
+			</if>
+			<if test="passwd !=null and passwd !='' ">
+				passwd = #{passwd}
+			</if>
+			<if test="enable !=null and enable !=0 ">
+				enable = #{enable}
+			</if>
+		</set>
+		where email = #{email}
+	</update>
+	
+	<select id="getUserByQuery">
+		select * from user
+		<where>
+			<if test="id !=null and id !='' ">
+				and id = #{id}
+			</if>
+			<if test="email !=null and email !='' ">
+				and email = #{email}
+			</if>
+			<if test="passwd !=null and passwd !='' ">
+				and passwd = #{passwd}
+			</if>
+			<if test="enable !=null and enable !=0 ">
+				and enable = #{enable}
+			</if>
+			<if test="type !=null and type !=0 ">
+				and type = #{type}
+			</if>
+		</where>
+	</select>
 </mapper>
 
