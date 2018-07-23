@@ -14,7 +14,7 @@ public class User {
 
 	private String name;
 	
-	private String password;
+	private String passwd;
 	
 	private String confirmPasswd;
 	
@@ -24,9 +24,9 @@ public class User {
 	
 	private Integer enable;
 	
-	private String avator;
+	private String avatar;
 	
-	private MultipartFile avatorFile;
+	private MultipartFile avatarFile;
 	
 	private String newPassword;
 	
@@ -34,6 +34,15 @@ public class User {
 	
 	private Long agencyId;
 	
+	private String aboutme;
+
+	public String getAboutme() {
+		return aboutme;
+	}
+
+	public void setAboutme(String aboutme) {
+		this.aboutme = aboutme;
+	}
 
 	public Long getAgencyId() {
 		return agencyId;
@@ -75,14 +84,6 @@ public class User {
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getConfirmPasswd() {
 		return confirmPasswd;
 	}
@@ -115,20 +116,20 @@ public class User {
 		this.enable = enable;
 	}
 
-	public String getAvator() {
-		return avator;
+	public String getAvatar() {
+		return avatar;
 	}
 
-	public void setAvator(String avator) {
-		this.avator = avator;
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
 	}
 
-	public MultipartFile getAvatorFile() {
-		return avatorFile;
+	public MultipartFile getAvatarFile() {
+		return avatarFile;
 	}
 
-	public void setAvatorFile(MultipartFile avatorFile) {
-		this.avatorFile = avatorFile;
+	public void setAvatarFile(MultipartFile avatarFile) {
+		this.avatarFile = avatarFile;
 	}
 
 	public String getNewPassword() {
@@ -145,5 +146,13 @@ public class User {
 
 	public void setKey(String key) {
 		this.key = key;
+	}
+
+	public String getPasswd() {
+		return passwd;
+	}
+
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
 	}
 }

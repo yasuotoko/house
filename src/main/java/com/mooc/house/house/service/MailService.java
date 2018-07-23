@@ -34,7 +34,7 @@ public class MailService {
 	private JavaMailSender mailSender;
 
 	
-	@Value("${Spring.mail.userName}")
+	@Value("${spring.mail.username}")
 	private String from;
 	
 	public void sendMail(String title, String url, String email) {

@@ -49,10 +49,10 @@ public class UserService {
 	 */
 	@Transactional(rollbackFor=Exception.class)
 	public boolean addAcount(User account) {
-		account.setPassword(HashUtils.encryPassword(account.getPassword()));
-		List<String> imgList = fileService.getImgPath(Lists.newArrayList(account.getAvatorFile()));
+		account.setPasswd(HashUtils.encryPassword(account.getPasswd()));
+		List<String> imgList = fileService.getImgPath(Lists.newArrayList(account.getAvatarFile()));
 		if (!imgList.isEmpty()) {
-			account.setAvator(imgList.get(0));
+			account.setAvatar(imgList.get(0));
 		}
 		BeanHelper.setDefaultProp(account,User.class);
 		BeanHelper.onInsert(account);
@@ -75,11 +75,11 @@ public class UserService {
 	public User auth(String uname, String password) {
 		User user = new User();
 		user.setEmail(uname);
-		user.setPassword(password);
+		user.setPasswd(password);
 		user.setEnable(1);
 		List<User> list = userMapper.getUserByQuery(user);
 		list.forEach(u -> {
-			u.setAvator(imgPrefix+u.getAvator());
+			u.setAvatar(imgPrefix+u.getAvatar());
 		});
 		if (!list.isEmpty()) {
 			return list.get(0);

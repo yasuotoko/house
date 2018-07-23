@@ -17,7 +17,7 @@ public class UserHelper {
 			return ResultMsg.errorMsg("用户名有误");
 		}
 		
-		if (account.getPassword().length()<6) {
+		if (account.getPasswd().length()<6) {
 			return ResultMsg.errorMsg("密码大于6位");
 		}
 		return new ResultMsg();

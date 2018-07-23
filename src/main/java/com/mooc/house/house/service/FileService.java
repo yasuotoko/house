@@ -30,7 +30,7 @@ public class FileService {
 					String path = StringUtils.substringAfterLast(localFile.getAbsolutePath(), filePath);
 					paths.add(path);
 				} catch (Exception e) {
-					// TODO: handle exception
+					e.printStackTrace();
 				}
 			}
 			

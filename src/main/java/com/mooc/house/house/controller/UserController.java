@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.buf.UEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ import com.mooc.house.house.common.result.ResultMsg;
 import com.mooc.house.house.common.utils.HashUtils;
 import com.mooc.house.house.service.UserService;
 
-@RestController
+@Controller
 public class UserController {
 
 	@Autowired
@@ -116,7 +117,7 @@ public class UserController {
 			return "redirect:/accounts/profile?" + ResultMsg.errorMsg("密码错误").asUrlParams();
 		}
 		User updateUser = new User();
-		updateUser.setPassword(HashUtils.encryPassword(newPassword));
+		updateUser.setPasswd(HashUtils.encryPassword(newPassword));
 		userService.updateUser(updateUser, email);
 		return "redirect:/accounts/profile" + ResultMsg.successMsg("更新成功").asUrlParams();
 	}
