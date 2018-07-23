@@ -1,0 +1,104 @@
+1 jdbc(java database connectivity)
+
+
+
+2 jndi(java name and directory interface)
+
+
+
+3 EJB(Enterprise JavaBean)
+   正是由于EJB的开放性，使得有的厂商能够以一种和EJB平行的方式来达到同样的目的。
+   生活实例：EJB到底是什么，这个……我暂时的理解，就是个特殊的类，特殊在他可以实现分布式的服务，就是多个人可以同时分布干一件事，总之还有点晕！
+
+4 RMI(RemoteMethod远程方法 Invoke调用) 
+   正如其名字所表示的那样，RMI协议调用远程对象上方法。它使用了序列化方式在客户端和服务器端传递数据。RMI是一种被EJB使用的更底层的协议。
+   
+5 Java IDL(接口定义语言)/CORBA   ????
+   公共对象请求代理结构（Common Object Request Breaker Architecture）
+   在java IDL的支持下，开发人员可以将Java和CORBA集成在一起。他们可以创建Java对象并使之可以在CORBA ORB中展开，或者他们还可以创建Java类并做为
+   和其他ORB一起展开的CORBA对象客户。后一种方法提供了另外一种途径，通过它可以被用于你的新的应用和旧系统相集成。
+   
+6 JSP(java Server page)
+
+
+   
+7 java servlet
+
+
+
+8 XML(Extensible Markup Language)
+
+
+
+9 JMS（Java Message Service）
+   JMs是用于和面向消息的中间件相互通信的应用程序接口（API）。
+   它既支持点对点的域，有支持发布/订阅类型的域，并且提供对下列类型的支持：经认可的消息传递，事务性消息传递，
+   一致性消息和具有持久性的订阅者的支持。JMS还提供了另一种方式对您的应用与旧的后台系统相集成。
+   
+   
+10 JTA（Java Transaction Architecture）
+    Java事务API。允许应用程序执行分布式事务处理——在两个或多个网络计算机资源上访问并且更新数据。
+	JDBC驱动程序的JTA支持极大地增强了数据访问能力。事务最简单最直接的目的就是保证数据的有效性，数据的一致性。
+	
+	个人理解： JTA事务比JDBC事务更强大。一个JTA事务可以有多个参与者，而一个JDBC事务则被限定在一个单一的数据库连接。
+	
+11 JTS(Java Transaction Service)
+    JTS是CORBA OTS事务监控的基本的实现。JTS规定了事务管理器的实现方式。
+	该事务管理器是在高层支持Java Transaction API (JTA)规范，并且在较底层实现OMG OTSspecification的Java映像。
+	JTS事务管理器为应用服务器、资源管理器、独立的应用以及通信资源管理器提供了事务服务。
+
+
+12 java mail
+    javaMail是用于存取邮件服务的API，它提供了一套邮件服务器的抽象类。不仅支持SMTP服务器，也支持IMAP服务器。
+
+	生活实例：可以理解为邮局，咱们填写地址，邮局负责剩下的所有事，对邮寄做了层包装！
+	
+	
+13 JAF（JavaBeans Activation Framework）
+    JAF是一个专用的数据处理框架,它用于封装数据,并为应用程序提供访问和操作数据的接口.
+	也就是说,JAF让Java程序知道怎么对一个数据源进行查看,编辑,打印等.
+	
+	JavaMail利用JAF来处理MIME编码的邮件附件。MIME的字节流可以被转换成Java对象，或者转换自Java对象。
+	大多数应用都可以不需要直接使用JAF。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

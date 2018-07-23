@@ -1,0 +1,9 @@
+1 common-lang3
+
+2 common-logging
+
+3 common-beanutils
+
+4 common-collection
+
+5 common-codec
